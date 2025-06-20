@@ -4,6 +4,7 @@ import time
 from datetime import datetime
 import logging
 import os
+from dotenv import load_dotenv
 
 
 # === CONFIGURAÇÕES DE LOG ===
@@ -14,6 +15,8 @@ logging.basicConfig(
 )
 
 # === CONFIGURAÇÕES GERAIS ===
+load_dotenv()
+
 url = os.getenv('ZABBIX_URL')
 token = os.getenv('ZABBIX_TOKEN')
 
